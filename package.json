@@ -25,7 +25,8 @@
     "twilio": "^2.9.1",
     "url": "^0.11.0",
     "ware": "^1.3.0",
-    "ws": "^1.1.1"
+    "ws": "^1.1.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "jscs": "^2.7.0",
@@ -37,7 +38,9 @@
   },
   "scripts": {
     "pretest": "jscs ./lib/",
-    "test": "mocha tests/*.js"
+    "test": "mocha tests/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -57,5 +60,6 @@
     "microsoft bot framework"
   ],
   "author": "ben@howdy.ai",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
